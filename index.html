@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-dark text-light">
+    
+<main>
+    <div id="title">
+        <!-- navbar -->
+            <nav class="navbar bg-body-tertiary border-bottom" data-bs-theme="dark">
+                <div class="container-fluid justify-content-center align-items-center">
+                    <span class="navbar-brand mb-0 h1 text-uppercase">Roulette di Gabriele!</span>
+                </div>
+            </nav>
+    </div>
+    <!-- descrizione di cosa fa e come funziona -->
+    <div class="desc">
+        <div class="container">
+            <div class="row row-cols-auto justify-content-center align-items-center gap-1">
+                <h1>Serve per scegliere a caso un film/serie da guardare insieme</h1>
+                <h2>Inserisci il tuo nome e della serie/film nella casella sotto e premi "Aggiungi", l'aggiunta è anonima</h2>
+                <h2>Qualsiasi cosa esce lo guardiamo a prescindere, nessuna lametela.</h2>
+                <h2>Una volta inseriti tutto cliccare su "Scegli"</h2>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- form per inserire i dati -->
+    <div class="form">
+        <div class="container-fluid">
+            <div class="row row-cols-auto center " novalidate>
+                <!-- nome del tizio -->
+                <div class="in mb-3 d-flex flex-column">
+                    <label for="name" class="form-label h1 text-decoration-underline">Nome</label>
+                    <input type="text" class="form-control-lg text-light" id="name" data-bs-theme="dark" required>
+                </div>
+                <!-- nome film -->
+                <div class="in mb-3 d-flex flex-column">
+                    <label for="film" class="form-label h1 text-decoration-underline">Film/serie</label>
+                    <input type="text" class="form-control-lg text-light" id="film" data-bs-theme="dark" required>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success mb-3" onclick="add()">Aggiungi</button>
+                </div>
+            </div>
+            <div class="d-flex center">
+                <h1 id="stupid" class="text-uppercase btn btn-danger w-100 d-none"></h1>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="results" class="container">
+        <div class="row row-cols-auto justify-content-center align-items-center gap-3">
+            <button type="submit" class="btn btn-success mb-3" onclick="reveal()">Scegli</button>
+            <button type="submit" class="btn btn-danger mb-3" onclick="reset()">Reset</button>
+        </div>
+        <div class="container">
+            <div class="row row-cols-auto center">
+                <table class="table table-bordered" data-bs-theme="dark">
+                    <thead>
+                            <tr>
+                                <th><i class="bi bi-asterisk"></i></th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Film/serie</th>
+                                <th scope="col">Elimina</th>
+                            </tr>
+                    </thead>
+                    <tbody id="pull">
+
+                    </tbody>        
+                </table>            
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="./script.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="./node_modules/bootstrap-icons/font/bootstrap-icons.json"></script>
+
+</body>
+</html>

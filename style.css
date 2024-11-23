@@ -1,0 +1,28 @@
+.center{
+    justify-content: center !important; 
+    align-items: center !important;
+}
+
+div.in{
+    width: 100%;
+}
+
+table th{
+    max-width: 120px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+tr.table-success{
+        --bs-table-bg: green;
+}
+
+main button.btn{
+    width: 100px;
+    font-size: large;
+}
+
+table tbody#pull button.btn{
+    width: 50px;
+    margin: 0 !important;
+}
